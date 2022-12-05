@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyProjectController">
+   <children>
+      <Text layoutX="350.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a guess">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="300.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bulls &amp; Cows Game">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text fx:id="guessCounterText" layoutX="559.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output" wrappingWidth="480.43280029296875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="533.0" layoutY="490.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#exit" prefHeight="50.0" prefWidth="120.0" text="Exit" textFill="#ff0a02" visible="false" />
+      <Button fx:id="Start_over" alignment="CENTER" contentDisplay="CENTER" layoutX="724.0" layoutY="490.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#reset" prefHeight="50.0" prefWidth="120.0" text="Start Over" textFill="#22c759" visible="false" />
+      <TextField fx:id="guess" layoutX="300.0" layoutY="180.0" onAction="#checkGuess" promptText="Make a guess">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="849.0" layoutY="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#reset" prefHeight="49.0" prefWidth="75.0" text="Reset" textAlignment="JUSTIFY" textFill="#e10505" />
+      <TableView fx:id="score" layoutX="35.0" layoutY="250.0" prefHeight="346.0" prefWidth="485.0">
+        <columns>
+            <TableColumn fx:id="guess_num" minWidth="4.0" prefWidth="120.0" text="Guess" />
+            <TableColumn fx:id="input" minWidth="4.0" prefWidth="120.0" text="Your Number" />
+            <TableColumn fx:id="Bulls" minWidth="4.0" prefWidth="120.0" text="Bulls" />
+            <TableColumn fx:id="Cows" minWidth="4.0" prefWidth="120.0" text="Cows" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
