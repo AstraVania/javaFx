@@ -5,8 +5,7 @@ import java.util.List;
 
 public class TriviaFromFile extends FileHandler
 {
-	//private List<Answer> answers ;
-	//private String question;
+	
 	private List<TriviaCard> triviaCards = new ArrayList<>();
 
 	public TriviaFromFile()
@@ -26,11 +25,7 @@ public class TriviaFromFile extends FileHandler
 			Collections.shuffle(triviaCards);
 			
 		}
-//		for(int i = 0 ; i<triviaCards.size() ;i++)
-//		{
-//		// System.out.println(triviaCards.get(i).getQuestion());//+ " " + answers.get(i).isRight());
-//		 System.out.println(triviaCards.get(i).getQuestion());
-//		}
+
 
 	}
     public List<TriviaCard> getTrivaiaCards()
